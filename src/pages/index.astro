@@ -1,20 +1,23 @@
 ---
-import Educacion from '../components/Educacion.astro';
-import Experiencia from '../components/Experiencia.astro';
-import Habilidades from '../components/Habilidades.astro';
-import Inicio from '../components/Inicio.astro';
-import Proyectos from '../components/Proyectos.astro';
-import Layout from '../layouts/Layout.astro';
-
+import Educacion from "../components/Educacion.astro";
+import Experiencia from "../components/Experiencia.astro";
+import Habilidades from "../components/Habilidades.astro";
+import Inicio from "../components/Inicio.astro";
+import Proyectos from "../components/Proyectos.astro";
+import NavBar from "../components/UI/NavBar.astro";
+import Layout from "../layouts/Layout.astro";
+import LayoutHeader from "../layouts/LayoutHeader.astro";
 
 const title = "JonaDev";
 ---
 
 <Layout title={title}>
-	<Inicio />
-	<Experiencia />
-	<Proyectos />
-	<Habilidades />
-	<Educacion />
+  <LayoutHeader>
+    <NavBar />
+  </LayoutHeader>
+  <Inicio />
+  <Experiencia />
+  <Proyectos />
+  <Habilidades />
+  <Educacion />
 </Layout>
-

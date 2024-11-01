@@ -1,0 +1,16 @@
+---
+import MoonIcon from "../components/icons/MoonIcon.astro";
+import SunIcon from "../components/icons/SunIcon.astro";
+
+// TODO lógica de tema.
+// true = light theme, false = dark theme
+const theme = true;
+---
+
+<div class="flex justify-between fixed top-6 w-full px-10 items-center">
+  <a href="#inicio">
+    <img src="/logo.svg" alt="Logo" class="size-9" />
+  </a>
+  <slot />
+  {theme ? <SunIcon /> : <MoonIcon />}
+</div>
