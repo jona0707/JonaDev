@@ -6,6 +6,14 @@ import Container from "./UI/Container.astro";
 import Badge from "./utils/Badge.astro";
 import BadgePrimary from "./utils/BadgePrimary.astro";
 
+interface Badge {
+  text: string;
+  color: string;
+  link: string;
+  // TODO TIPAR EL ICON
+  icon: any;
+}
+
 const badgesInicio = [
   {
     text: "GitHub",

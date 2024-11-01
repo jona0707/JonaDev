@@ -1,7 +1,15 @@
 ---
 import Container from "./UI/Container.astro";
+import ExperienceLineTime from "./UI/ExperienceLineTime.astro";
+import BriefCaseIcon from "./icons/BriefCaseIcon.astro";
 ---
 
 <Container id="experiencia">
-  <div>Esta es la experiencia.</div>
+  <div class="w-full">
+    <div class="flex gap-2 items-center mb-3">
+      <h2 class="font-bold text-3xl">Experiencia Laboral</h2>
+      <BriefCaseIcon />
+    </div>
+    <ExperienceLineTime />
+  </div>
 </Container>

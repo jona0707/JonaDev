@@ -1,0 +1,30 @@
+---
+interface Props {
+  text: string;
+  color: string;
+}
+
+const { text, color } = Astro.props;
+
+const colorClasses: Record<string, string> = {
+  black: "bg-black text-white",
+};
+---
+
+<span
+  class={`
+      inline-flex
+      items-center
+      rounded-full
+      px-4
+      py-1 
+      ${colorClasses[color]} 
+      w-auto
+      
+      `}
+>
+  <slot />
+  <span class="ml-2">
+    {text}
+  </span>
+</span>
