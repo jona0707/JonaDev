@@ -1,0 +1,27 @@
+---
+interface Props {
+  text: string;
+  color: string;
+}
+
+const { text, color } = Astro.props;
+
+const colorClasses: Record<string, string> = {
+  available: "text-available border-available",
+};
+---
+
+<span
+  class={`
+    inline-block 
+    rounded-full 
+    border-[4px] 
+    px-3
+    py-1 
+    ${colorClasses[color]} 
+    bg-transparent`}
+>
+  <span class="font-bold">
+    {text}
+  </span>
+</span>

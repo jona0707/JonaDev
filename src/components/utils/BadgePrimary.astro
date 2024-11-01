@@ -1,0 +1,31 @@
+---
+interface Props {
+  text: string;
+  color: string;
+  link: string;
+}
+
+const { text, color, link } = Astro.props;
+
+const colorClasses: Record<string, string> = {
+  secondary: "bg-secondary text-white",
+};
+---
+
+<a
+  href={link}
+  target="_blank"
+  class={`
+      inline-flex
+      rounded-xl 
+      px-3
+      py-1 
+      ${colorClasses[color]} 
+      w-auto
+      `}
+>
+  <slot />
+  <span class="ml-2">
+    {text}
+  </span>
+</a>

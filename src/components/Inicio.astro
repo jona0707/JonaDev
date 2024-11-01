@@ -1,0 +1,65 @@
+---
+import GitHubIcon from "./icons/GitHubIcon.astro";
+import LinkedInIcon from "./icons/LinkedInIcon.astro";
+import MailIcon from "./icons/MailIcon.astro";
+import Container from "./UI/Container.astro";
+import Badge from "./utils/Badge.astro";
+import BadgePrimary from "./utils/BadgePrimary.astro";
+
+const badgesInicio = [
+  {
+    text: "GitHub",
+    color: "secondary",
+    link: "https://github.com/jona0707",
+    icon: GitHubIcon,
+  },
+  {
+    text: "LinkedIn",
+    color: "secondary",
+    link: "https://www.linkedin.com/in/jonathan-puente-07p/",
+    icon: LinkedInIcon,
+  },
+  {
+    text: "Contáctame",
+    color: "secondary",
+    link: "mailto:jona07072000@gmail.com",
+    icon: MailIcon,
+  },
+];
+---
+
+<Container>
+  <div class="flex gap-14">
+    <div class="flex flex-col flex-1 justify-center">
+      <div class="flex gap-1 items-end">
+        <h1 class="text-4xl font-bold">
+          hey, soy <span class="text-8xl">Jona</span>
+        </h1>
+        <div class="mb-4">
+          <Badge text="Disponible para trabajar" color="available" />
+        </div>
+      </div>
+      <p class="text-lg mb-3">
+        Estudiante de último semestre de Ingeniería en Tecnologías de la
+        Información en la EPN<span class="text-xs">EC</span>. Especializado en
+        el <span class="font-bold text-secondary"
+          >desarrollo de aplicaciones web</span
+        > con 1 año y medio de experiencia.
+      </p>
+      <div class="flex gap-1">
+        {
+          badgesInicio.map(({ text, color, link, icon: Icon }) => (
+            <BadgePrimary text={text} color={color} link={link}>
+              <Icon />
+            </BadgePrimary>
+          ))
+        }
+      </div>
+    </div>
+    <img
+      src="/Avatar.webp"
+      alt="Jona's Avatar"
+      class="flex-3 size-4/12 border-[15px] border-black rounded-full p-5"
+    />
+  </div>
+</Container>
