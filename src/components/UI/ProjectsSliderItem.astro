@@ -1,0 +1,81 @@
+---
+import type { Project } from "../../types/projects";
+import ArrowUpLeft from "../icons/ArrowUpLeft.astro";
+import BadgeTech from "../utils/BadgeTech.astro";
+
+const {
+  title,
+  subtitle,
+  description,
+  production,
+  code,
+  presentation,
+  image,
+  stack,
+} = Astro.props as Project;
+---
+
+<div class="flex gap-5 items-center h-full">
+  <div class="flex flex-col gap-2 max-w-[29rem]">
+    <h3 class="text-2xl font-semibold text-secondary">
+      {title}
+    </h3>
+    <h4 class="text-xl font-semibold text-black">
+      {subtitle}
+    </h4>
+    <div class="flex gap-2 flex-wrap">
+      {
+        stack.map(({ tech, color, icon: Icon }) => (
+          <BadgeTech text={tech} color={color}>
+            <Icon color="#fff" size="18" />
+          </BadgeTech>
+        ))
+      }
+    </div>
+    <p class="w-96">{description}</p>
+    <div class="flex gap-4">
+      {
+        !!production && (
+          <a
+            href={production}
+            target="_blank"
+            class="inline-flex items-center bg-secondary text-white p-1 px-2 rounded-lg hover:no-underline"
+          >
+            Producción <ArrowUpLeft />
+          </a>
+        )
+      }
+      {
+        !!code && (
+          <a
+            href={code}
+            target="_blank"
+            class="inline-flex items-center bg-secondary text-white p-1 px-2 rounded-lg hover:no-underline"
+          >
+            Código <ArrowUpLeft />
+          </a>
+        )
+      }
+      {
+        !!presentation && (
+          <a
+            href={code}
+            target="_blank"
+            class="inline-flex items-center bg-secondary text-white p-1 px-2 rounded-lg hover:no-underline"
+          >
+            Presentación <ArrowUpLeft />
+          </a>
+        )
+      }
+    </div>
+  </div>
+  <div class="flex w-full justify-end">
+    <a href={production || code || presentation} target="_blank">
+      <img
+        src={image}
+        alt={title}
+        class="w-[25rem] rounded-xl shadow-xl transition duration-500 hover:scale-90 hover:rounded-xl"
+      />
+    </a>
+  </div>
+</div>

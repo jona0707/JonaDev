@@ -1,11 +1,6 @@
 ---
-interface Props {
-  text: string;
-  color: string;
-  link: string;
-}
-
-const { text, color, link } = Astro.props;
+const { text, color, link } = Astro.props as BadgePrimary;
+import type {BadgePrimary} from '../../types/badges';
 
 const colorClasses: Record<string, string> = {
   secondary: "bg-secondary text-white",

@@ -1,10 +1,6 @@
 ---
-interface Props {
-  text: string;
-  color: string;
-}
-
-const { text, color } = Astro.props;
+const { text, color } = Astro.props as Badge;
+import type { Badge } from "../../types/badges";
 
 const colorClasses: Record<string, string> = {
   available: "text-available border-available",

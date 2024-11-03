@@ -1,10 +1,6 @@
 ---
-interface Props {
-  text: string;
-  color: string;
-}
-
-const { text, color } = Astro.props;
+const { text, color } = Astro.props as BadgeTech;
+import type { BadgeTech } from "../../types/badges";
 
 const colorClasses: Record<string, string> = {
   black: "bg-black text-white",

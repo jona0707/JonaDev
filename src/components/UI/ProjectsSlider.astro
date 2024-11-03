@@ -1,0 +1,59 @@
+---
+import ProjectsSliderItem from "./ProjectsSliderItem.astro";
+import { PROJECTS } from "../../data/projects.ts";
+import type { Project } from "../../types/projects";
+import RightArrowIcon from "../icons/RightArrowIcon.astro";
+import LeftArrowIcon from "../icons/LeftArrowIcon.astro";
+const chunkArray = (array: Project[], size: number) => {
+  const result = [];
+  for (let i = 0; i < array.length; i += size) {
+    result.push(array.slice(i, i + size));
+  }
+  return result;
+};
+
+const projectChunks = chunkArray(PROJECTS, 2);
+---
+
+<div
+  id="controls-carousel"
+  class="relative w-full h-full"
+  data-carousel="static"
+>
+  <!-- Carousel wrapper -->
+  <div class="relative h-full overflow-hidden rounded-lg md:h-[40rem]">
+    <!-- Items -->
+    {
+      projectChunks.map((chunk, index) => (
+        <div
+          class={`duration-700 ease-in-out flex justify-center items-center ${index === 0 ? "block" : "hidden"}`}
+          data-carousel-item={index === 0 ? "active" : ""}
+        >
+          <div class="flex flex-col gap-2 h-full justify-between">
+            {chunk.map((ch) => (
+              <ProjectsSliderItem {...ch} />
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  <!-- Slider controls -->
+  <button
+    type="button"
+    class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+    data-carousel-prev
+  >
+    <LeftArrowIcon />
+    <span class="sr-only">Previous</span>
+  </button>
+  <button
+    type="button"
+    class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+    data-carousel-next
+  >
+    <RightArrowIcon />
+    <span class="sr-only">Next</span>
+  </button>
+</div>
