@@ -1,0 +1,29 @@
+---
+const { text, color, size } = Astro.props as BadgeTech;
+import type { BadgeTech } from "../../types/badges";
+
+const colorClasses: Record<string, string> = {
+  black: "bg-black text-white",
+  white: "text-black",
+};
+---
+
+<span
+  class={`
+    flex
+    flex-col
+    items-center
+    justify-center
+    pt-2
+    px-3
+    ${colorClasses[color]}
+    w-[${size}rem] 
+    h-[${size}rem]
+    rounded-md
+    `}
+>
+  <slot />
+  <span class="mt-3 text-center">
+    {text}
+  </span>
+</span>

@@ -1,0 +1,49 @@
+---
+import Container from "./UI/Container.astro";
+import StackTech from "./UI/StackTech.astro";
+import ToolIcon from "./icons/ToolIcon.astro";
+import KeyboardIcon from "./icons/KeyboardIcon.astro";
+import ScreenIcon from "./icons/ScreenIcon.astro";
+import SmileIcon from "./icons/SmileIcon.astro";
+import PointerIcon from "./icons/PointerIcon.astro";
+import StackSoftware from "./UI/StackSoftware.astro";
+import StackSoft from "./UI/StackSoft.astro";
+---
+
+<Container id="habilidades">
+  <div class="w-full">
+    <div class="flex gap-2 items-center mb-3">
+      <h2 class="font-bold text-3xl">Habilidades</h2>
+      <ToolIcon />
+      <p class="inline-flex items-center gap-2">
+        ( Pon tu cursor sobre la tecnología
+        <PointerIcon />)
+      </p>
+    </div>
+    <div class="flex flex-col ml-4 gap-3">
+      <div>
+        <div class="inline-flex gap-2 items-center">
+          <h2 class="font-bold text-3xl">Técnicas</h2>
+          <KeyboardIcon />
+        </div>
+        <StackTech />
+      </div>
+      <div>
+        <div class="inline-flex gap-2 items-center">
+          <h2 class="font-bold text-3xl">Software</h2>
+          <ScreenIcon />
+        </div>
+        <StackSoftware />
+      </div>
+      <div>
+        <div class="inline-flex gap-2 items-center">
+          <h2 class="font-bold text-3xl">Blandas</h2>
+          <SmileIcon />
+        </div>
+        <div>
+          <StackSoft />
+        </div>
+      </div>
+    </div>
+  </div>
+</Container>

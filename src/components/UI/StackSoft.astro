@@ -1,0 +1,14 @@
+---
+import { SOFT } from "../../data/tech";
+---
+
+<div class="grid grid-cols-3 gap-4 mt-2">
+  {
+    SOFT.map((item) => (
+      <div class="inline-flex items-center justify-center">
+        <span class="w-1.5 h-1.5 bg-black rounded-full mr-2" />
+        {item}
+      </div>
+    ))
+  }
+</div>

@@ -1,0 +1,62 @@
+---
+import { TECH } from "../../data/tech";
+import BadgeHability from "../utils/BadgeHability.astro";
+
+const pro = TECH.filter((tech) => tech.nivel === "pro").flatMap(
+  (tech) => tech.techs
+);
+const mid = TECH.filter((tech) => tech.nivel === "mid").flatMap(
+  (tech) => tech.techs
+);
+const beg = TECH.filter((tech) => tech.nivel === "beg").flatMap(
+  (tech) => tech.techs
+);
+---
+
+<div class="flex flex-col gap-2">
+  <h4 class="text-xl text-start font-semibold text-secondary">Proeficiente</h4>
+  <div class="flex w-full justify-between gap-2">
+    {
+      pro.map(({ tech, color, icon: Icon }) => (
+        <div class="relative group">
+          <BadgeHability color={color} size={9}>
+            <Icon color="black" secondaryColor="white" size={70} />
+          </BadgeHability>
+          <div class="absolute bottom-full mb-2 hidden w-max px-2 py-1 text-sm text-white bg-black rounded group-hover:block">
+            {tech}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+  <h4 class="text-xl text-start font-semibold text-secondary">Competente</h4>
+  <div class="flex w-full justify-between gap-2">
+    {
+      mid.map(({ tech, color, icon: Icon }) => (
+        <div class="relative group">
+          <BadgeHability color={color} size={7}>
+            <Icon color="black" secondaryColor="white" size={50} />
+          </BadgeHability>
+          <div class="absolute bottom-full mb-2 hidden w-max px-2 py-1 text-sm text-white bg-black rounded group-hover:block">
+            {tech}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+  <h4 class="text-xl text-start font-semibold text-secondary">Experiencia en</h4>
+  <div class="flex w-full justify-between gap-2">
+    {
+      beg.map(({ tech, color, icon: Icon }) => (
+        <div class="relative group">
+          <BadgeHability color={color} size={5}>
+            <Icon color="black" secondaryColor="white" size={50} />
+          </BadgeHability>
+          <div class="absolute bottom-full mb-2 hidden w-max px-2 py-1 text-sm text-white bg-black rounded group-hover:block">
+            {tech}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>

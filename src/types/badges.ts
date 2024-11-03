@@ -5,6 +5,7 @@ export interface Badge {
 export interface BadgeTech {
   text: string;
   color: string;
+  size?: number;
 }
 export interface BadgePrimary {
     text: string;

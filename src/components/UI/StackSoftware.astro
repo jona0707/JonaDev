@@ -1,0 +1,21 @@
+---
+import { SOFTWARE } from "../../data/tech";
+import BadgeHability from "../utils/BadgeHability.astro";
+---
+
+<div class="flex flex-col gap-2">
+  <div class="flex w-full justify-between gap-2">
+    {
+      SOFTWARE.map(({ color, icon: Icon, tech }) => (
+        <div class="relative group">
+          <BadgeHability color={color} size={5}>
+            <Icon color="black" secondaryColor="white" size={40} />
+          </BadgeHability>
+          <div class="absolute bottom-full mb-2 hidden w-max px-2 py-1 text-sm text-white bg-black rounded group-hover:block">
+            {tech}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
