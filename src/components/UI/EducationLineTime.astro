@@ -1,0 +1,20 @@
+---
+import { EDUCATION } from "../../data/education";
+import EducationLineTimeItem from "./EducationLineTimeItem.astro";
+---
+
+<ol class="relative border-s-[3px] border-secondary">
+  {
+    EDUCATION.map((exp) => (
+      <li class="mb-5 ms-5">
+        <EducationLineTimeItem
+          date={exp.date}
+          field={exp.field}
+          institution={exp.institution}
+          description={exp.description}
+          stack={exp.stack}
+        />
+      </li>
+    ))
+  }
+</ol>

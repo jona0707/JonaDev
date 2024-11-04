@@ -35,7 +35,7 @@ const beg = TECH.filter((tech) => tech.nivel === "beg").flatMap(
       mid.map(({ tech, color, icon: Icon }) => (
         <div class="relative group">
           <BadgeHability color={color} size={7}>
-            <Icon color="black" secondaryColor="white" size={50} />
+            <Icon color="black" secondaryColor="white" size={60} />
           </BadgeHability>
           <div class="absolute bottom-full mb-2 hidden w-max px-2 py-1 text-sm text-white bg-black rounded group-hover:block">
             {tech}
@@ -44,7 +44,9 @@ const beg = TECH.filter((tech) => tech.nivel === "beg").flatMap(
       ))
     }
   </div>
-  <h4 class="text-xl text-start font-semibold text-secondary">Experiencia en</h4>
+  <h4 class="text-xl text-start font-semibold text-secondary">
+    Experiencia en
+  </h4>
   <div class="flex w-full justify-between gap-2">
     {
       beg.map(({ tech, color, icon: Icon }) => (

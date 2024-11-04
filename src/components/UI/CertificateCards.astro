@@ -1,0 +1,54 @@
+---
+import { COMPLEMENTARY } from "../../data/education";
+import CertificateCard from "./CertificateCard.astro";
+---
+
+<div class="mb-8">
+  <div class="relative my-3">
+    <hr class="border-[1.5px] border-black" />
+    <div
+      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#f9f9f9] px-2 text-black"
+    >
+      2024
+    </div>
+  </div>
+  <div class="flex gap-4 mb-3 justify-around">
+    {
+      COMPLEMENTARY.filter((comp) => comp.year == 2024).map(
+        ({ certificate, image, academyTime, stack }) => (
+          <CertificateCard
+            certificate={certificate}
+            image={image}
+            academyTime={academyTime}
+            stack={stack}
+          />
+        )
+      )
+    }
+  </div>
+</div>
+
+<div>
+  <div class="relative my-3">
+    <hr class="border-[1.5px] border-black" />
+    <div
+      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#f9f9f9] px-2 text-black"
+    >
+      2022
+    </div>
+  </div>
+  <div class="flex gap-4 mb-3 justify-around">
+    {
+      COMPLEMENTARY.filter((comp) => comp.year == 2022).map(
+        ({ certificate, image, academyTime, stack }) => (
+          <CertificateCard
+            certificate={certificate}
+            image={image}
+            academyTime={academyTime}
+            stack={stack}
+          />
+        )
+      )
+    }
+  </div>
+</div>

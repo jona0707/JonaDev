@@ -1,0 +1,41 @@
+---
+import BadgeTech from "../utils/BadgeTech.astro";
+import type { Complementary } from "../../types/education";
+import CertificateModal from "./CertificateModal.astro";
+const { certificate, image, academyTime, stack } = Astro.props as Complementary;
+---
+
+<div class="flex flex-col">
+  <h4 class="w-96 text-xl font-semibold text-secondary mt-1 mb-2">
+    {certificate}
+  </h4>
+  <div class="flex gap-5 justify-start">
+    <button
+      data-modal-target=`certificate-modal-${certificate}`
+      data-modal-toggle=`certificate-modal-${certificate}`
+      type="button"
+    >
+      <img
+        transition:name=`img-${certificate}`
+        class="w-36 rounded-2xl border-4 border-black"
+        src={image}
+        alt={certificate}
+      />
+    </button>
+    <div class="flex flex-col justify-center pb-3">
+      <h3 class="font-bold text-lg">{academyTime}</h3>
+      <div class="flex gap-2 flex-wrap">
+        {
+          stack.map(({ tech, color, icon: Icon }) => (
+            <BadgeTech text={tech} color={color}>
+              <Icon color="#fff" secondaryColor="#000" size="18" />
+            </BadgeTech>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Lanzamiento del modal -->
+<CertificateModal image={image} certificate={certificate} />

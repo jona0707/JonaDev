@@ -15,6 +15,7 @@ import GitIcon from "../components/tech-icons/GitIcon.astro";
 import HTMLIcon from "../components/tech-icons/HTMLIcon.astro";
 import JavaIcon from "../components/tech-icons/JavaIcon.astro";
 import JavaScriptIcon from "../components/tech-icons/JavaScriptIcon.astro";
+import KotlinIcon from "../components/tech-icons/KotlinIcon.astro";
 import MongoDBIcon from "../components/tech-icons/MongoDBIcon.astro";
 import MSQLServerIcon from "../components/tech-icons/MSQLServerIcon.astro";
 import NodeIcon from "../components/tech-icons/NodeIcon.astro";
@@ -31,14 +32,14 @@ export const TECH: Tech[] = [
     nivel: "pro",
     techs: [
       {
-        tech: "React",
-        color: "white",
-        icon: ReactIcon,
-      },
-      {
         tech: "JavaScript",
         color: "white",
         icon: JavaScriptIcon,
+      },
+      {
+        tech: "React",
+        color: "white",
+        icon: ReactIcon,
       },
       {
         tech: "HTML5",
@@ -66,11 +67,6 @@ export const TECH: Tech[] = [
         icon: TypeScriptIcon,
       },
       {
-        tech: "Git",
-        color: "white",
-        icon: GitIcon,
-      },
-      {
         tech: "Express",
         color: "white",
         icon: ExpressIcon,
@@ -95,6 +91,11 @@ export const TECH: Tech[] = [
         color: "white",
         icon: MongoDBIcon,
       },
+      {
+        tech: "Git",
+        color: "white",
+        icon: GitIcon,
+      },
     ],
   },
   {
@@ -104,6 +105,11 @@ export const TECH: Tech[] = [
         tech: "Java",
         color: "white",
         icon: JavaIcon,
+      },
+      {
+        tech: "Kotlin",
+        color: "white",
+        icon: KotlinIcon,
       },
       {
         tech: "Python",
