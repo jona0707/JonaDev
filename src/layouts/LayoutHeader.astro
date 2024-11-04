@@ -7,10 +7,12 @@ import SunIcon from "../components/icons/SunIcon.astro";
 const theme = true;
 ---
 
-<div class="flex justify-between fixed top-6 w-full px-10 items-center">
+<div class="flex justify-between fixed top-6 w-full px-10 items-center z-50">
   <a href="#inicio">
     <img src="/logo.svg" alt="Logo" class="size-9" />
   </a>
-  <slot />
+  <div class="mt-2">
+    <slot />
+  </div>
   {theme ? <SunIcon /> : <MoonIcon />}
 </div>
