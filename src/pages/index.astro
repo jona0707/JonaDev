@@ -5,20 +5,20 @@ import Habilidades from "../components/Habilidades.astro";
 import Inicio from "../components/Inicio.astro";
 import Proyectos from "../components/Proyectos.astro";
 import SobreMi from "../components/SobreMi.astro";
-import NavBar from "../components/UI/NavBar.astro";
 import Layout from "../layouts/Layout.astro";
-import Footer from "../components/UI/Footer.astro";
-import ResponsiveNavBar from "../components/UI/ResponsiveNavBar.astro";
-
 const title = "JonaDev";
 ---
 
 <Layout title={title}>
   <Inicio />
+  <hr class="w-48 h-1 mx-auto my-4 bg-gray-300 border-0 rounded md:my-10 dark:bg-gray-700">
   <Experiencia />
+  <hr class="w-48 h-1 mx-auto my-4 bg-gray-300 border-0 rounded md:my-10 dark:bg-gray-700">
   <Proyectos />
+  <hr class="w-48 h-1 mx-auto my-4 bg-gray-300 border-0 rounded md:my-10 dark:bg-gray-700">
   <Habilidades />
+  <hr class="w-48 h-1 mx-auto my-4 bg-gray-300 border-0 rounded md:my-10 dark:bg-gray-700">
   <Educacion />
+  <hr class="w-48 h-1 mx-auto my-4 bg-gray-300 border-0 rounded md:my-10 dark:bg-gray-700">
   <SobreMi />
-  <Footer slot="footer" />
 </Layout>

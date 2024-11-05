@@ -1,3 +1,5 @@
+import AstroIcon from "../components/icons/AstroIcon.astro";
+import TailwindIcon from "../components/icons/TailwindIcon.astro";
 import FigmaIcon from "../components/software-icons/FigmaIcon.astro";
 import GitHubIcon2 from "../components/software-icons/GitHubIcon2.astro";
 import OfficeIcon from "../components/software-icons/OfficeIcon.astro";
@@ -6,6 +8,7 @@ import VSCIcon from "../components/software-icons/VSCIcon.astro";
 import VSIcon from "../components/software-icons/VSIcon.astro";
 import ArduinoIcon from "../components/tech-icons/ArduinoIcon.astro";
 import BashIcon from "../components/tech-icons/BashIcon.astro";
+import BootstrapIcon from "../components/tech-icons/BootstrapIcon.astro";
 import CanvaIcon from "../components/tech-icons/CanvaIcon.astro";
 import CIcon from "../components/tech-icons/CIcon.astro";
 import CSharpIcon from "../components/tech-icons/CSharpIcon.astro";
@@ -16,6 +19,7 @@ import HTMLIcon from "../components/tech-icons/HTMLIcon.astro";
 import JavaIcon from "../components/tech-icons/JavaIcon.astro";
 import JavaScriptIcon from "../components/tech-icons/JavaScriptIcon.astro";
 import KotlinIcon from "../components/tech-icons/KotlinIcon.astro";
+import MuiIcon from "../components/tech-icons/MuiIcon.astro";
 import MongoDBIcon from "../components/tech-icons/MongoDBIcon.astro";
 import MSQLServerIcon from "../components/tech-icons/MSQLServerIcon.astro";
 import NodeIcon from "../components/tech-icons/NodeIcon.astro";
@@ -77,6 +81,11 @@ export const TECH: Tech[] = [
         icon: NodeIcon,
       },
       {
+        tech: "Astro",
+        color: "white",
+        icon: AstroIcon,
+      },
+      {
         tech: "C#",
         color: "white",
         icon: CSharpIcon,
@@ -115,6 +124,21 @@ export const TECH: Tech[] = [
         tech: "Python",
         color: "white",
         icon: PythonIcon,
+      },
+      {
+        tech: "MaterialUI",
+        color: "white",
+        icon: MuiIcon,
+      },
+      {
+        tech: "Tailwind",
+        color: "white",
+        icon: TailwindIcon,
+      },
+      {
+        tech: "Bootstrap",
+        color: "white",
+        icon: BootstrapIcon,
       },
       {
         tech: "Bash",

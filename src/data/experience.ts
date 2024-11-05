@@ -44,6 +44,7 @@ export const EXPERIENCIE: Experience[] = [
       "Responsable del mantenimiento, creación y mejora de páginas web utilizando principalmente WordPress. Integración al equipo de O2I, participando activamente en el desarrollo web, implementación de plugins, consumo de API y otras tareas asignadas durante mi práctica profesional.",
       "Contribución significativa a la agregación de contenido y creación de nuevas páginas para la web de Divulgaciencia.",
     ],
+    link: "https://observatorio-o2i.epn.edu.ec/",
     stack: [
       {
         tech: "WordPress",

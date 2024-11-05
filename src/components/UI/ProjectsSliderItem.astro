@@ -16,14 +16,14 @@ const {
 ---
 
 <div class="h-full flex flex-col gap-5 w-[80%] p-4 md:p-0">
-  <div class="flex flex-col gap-2 max-w-full md:max-w-[29rem]">
+  <div class="flex flex-col gap-2 max-w-full">
     <h3 class="text-2xl font-semibold text-secondary dark:text-secondaryDark">
       {title}
     </h3>
     <h4 class="text-xl font-semibold text-black dark:text-primary">
       {subtitle}
     </h4>
-    <div class="flex gap-2 flex-wrap">
+    <div class="flex gap-2 flex-wrap md:flex-nowrap">
       {
         stack.map(({ tech, color, icon: Icon }) => (
           <BadgeTech text={tech} color={color}>
@@ -32,7 +32,7 @@ const {
         ))
       }
     </div>
-    <p class="w-full md:w-96">{description}</p>
+    <p class="w-full">{description}</p>
     <div class="flex gap-4">
       {
         !!production && (
@@ -70,7 +70,7 @@ const {
     </div>
   </div>
   <div
-  class="flex w-full h-32 md:h-64 justify-end shadow-2xl md:shadow-black transition duration-500 hover:scale-90 hover:rounded-xl dark:shadow-lg dark:shadow-slate-700 dark:shadow-opacity-1 overflow-hidden rounded-xl"
+  class="flex w-full h-32 md:h-96 justify-end shadow-2xl md:shadow-black transition duration-500 hover:scale-90 hover:rounded-xl dark:shadow-lg dark:shadow-slate-700 dark:shadow-opacity-1 overflow-hidden rounded-xl"
 >
   <a href={production || code || presentation} target="_blank" class="w-full h-full">
     <img

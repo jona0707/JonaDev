@@ -38,13 +38,12 @@ const { date, title, subtitle, description, link, stack } =
         ))
       }
     </div>
-    <div class="flex justify-end">
-      <!-- TODO REVISAR EL ANCHOR -->
-      <a
-        href={link}
-        ||
-        #
-        class="inline-flex
+    {
+      link ? (
+        <div class="flex justify-end">
+          <a
+            href={link}
+            class="inline-flex
              items-center
              text-lg
              font-normal
@@ -52,10 +51,11 @@ const { date, title, subtitle, description, link, stack } =
              dark:text-secondaryDark
              focus:z-10
              cursor-pointer"
-        >Más <ArrowUpLeft /></a
-      >
-    </div>
+          >
+            Visítalos <ArrowUpLeft />
+          </a>
+        </div>
+      ) : null
+    }
   </div>
 </div>
-
-

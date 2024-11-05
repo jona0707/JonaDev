@@ -1,0 +1,21 @@
+---
+import DownloadIcon from "../components/icons/DownloadIcon.astro";
+import MailIcon from "../components/icons/MailIcon.astro";
+---
+
+<div class="w-full px-10 bg-black text-white dark:bg-white dark:text-black">
+  <div class="flex justify-between items-center py-2">
+    <p>
+      <a class="inline-flex gap-2" href="https://drive.google.com/file/d/10LtpaW-u1y4KxWhjwvuJPgHmIrQ2Asr3/view?usp=sharing" target="_blank"
+      >Descarga CV <DownloadIcon /></a>
+    </p>
+    <p class="hidden md:flex">
+      Hecho por <a href="https://github.com/jona0707"> <span class="px-1"> Jona, </span> </a> con <a href="https://astro.build/"> <span class="px-1"> Astro </span> </a> y <a href="https://tailwindcss.com/"> <span class="px-1"> Tailwindcss </span> </a>.
+    </p>
+    <p>
+      <a class="inline-flex gap-2 items-center" href="mailto:jona07072000@gmail.com" target="_blank"
+        >Contáctame <MailIcon size={19} stroke={2} /></a
+      >
+    </p>
+  </div>
+</div>

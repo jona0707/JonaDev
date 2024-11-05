@@ -7,13 +7,7 @@ import ExperienceLineTimeItem from "./ExperienceLineTimeItem.astro";
   {
     EXPERIENCIE.map((exp) => (
       <li class="mb-10 ms-5">
-        <ExperienceLineTimeItem
-          date={exp.date}
-          title={exp.title}
-          subtitle={exp.subtitle}
-          description={exp.description}
-          stack={exp.stack}
-        />
+        <ExperienceLineTimeItem {...exp}/>
       </li>
     ))
   }
