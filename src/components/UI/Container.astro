@@ -3,9 +3,7 @@ interface Props {
   id: string;
 }
 const {id} = Astro.props;
-//TODO ANALIZAR ANCHOS
 ---
-
-<section class="min-h-screen flex items-center justify-center w-full max-w-5xl mx-auto h-auto pt-8 dark:text-primary" id={id}>
+<section class="min-h-screen flex items-center justify-center w-full max-w-2xl md:max-w-4xl lg:max-w-5xl mx-auto h-auto pt-8 dark:text-primary" id={id}>
   <slot />
 </section>

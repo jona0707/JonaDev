@@ -12,7 +12,7 @@ import CertificateCard from "./CertificateCard.astro";
       2024
     </div>
   </div>
-  <div class="flex gap-4 mb-3 justify-around">
+  <div class="flex flex-wrap gap-4 mb-3 md:justify-around">
     {
       COMPLEMENTARY.filter((comp) => comp.year == 2024).map(
         ({ certificate, image, academyTime, stack }) => (
@@ -37,7 +37,7 @@ import CertificateCard from "./CertificateCard.astro";
       2022
     </div>
   </div>
-  <div class="flex gap-4 mb-3 justify-around">
+  <div class="flex flex-wrap gap-4 mb-3 md:justify-around">
     {
       COMPLEMENTARY.filter((comp) => comp.year == 2022).map(
         ({ certificate, image, academyTime, stack }) => (

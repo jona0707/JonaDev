@@ -1,8 +1,8 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import "../styles/global.css";
-import LayoutHeader from "./LayoutHeader.astro";
 import LayoutFooter from "./LayoutFooter.astro";
+import Header from "../components/Header.astro";
 interface Props {
   title: string;
 }
@@ -30,10 +30,11 @@ const { title } = Astro.props;
     <ClientRouter />
   </head>
   <body class="flex flex-col min-h-screen w-full">
-    <LayoutHeader>
-      <slot name="header" />
-    </LayoutHeader>
-    <slot />
+    <Header />
+    <main class="px-4 pb-4 lg:p-0 w-full">
+      <slot />
+    </main>
+
     <LayoutFooter>
       <slot name="footer" />
     </LayoutFooter>
@@ -61,8 +62,10 @@ const { title } = Astro.props;
   }
   body {
     font-family: "Istok Web", sans-serif;
-    transition: background-color var(--transition-duration) var(--transition-timing-function),
-              color var(--transition-duration) var(--transition-timing-function);
+    transition:
+      background-color var(--transition-duration)
+        var(--transition-timing-function),
+      color var(--transition-duration) var(--transition-timing-function);
   }
   /* Para evitar animar a usauarios con animaciones desactivadas*/
   @media (prefers-reduced-motion: reduce) {

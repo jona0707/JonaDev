@@ -12,7 +12,7 @@ const { date, title, subtitle, description, link, stack } =
 >
 </div>
 
-<div class="flex">
+<div class="flex flex-col md:flex-row">
   <div class="w-2/5">
     <time
       class="mb-1 text-lg font-normal leading-none text-black dark:text-primary"
@@ -29,7 +29,7 @@ const { date, title, subtitle, description, link, stack } =
     <ul class="ml-4 list-disc mb-2">
       {description.map((desc) => <li>{desc}</li>)}
     </ul>
-    <div class="flex gap-2">
+    <div class="flex gap-2 flex-wrap sm:flex-nowrap">
       {
         stack.map(({ tech, color, icon: Icon }) => (
           <BadgeTech text={tech} color={color}>

@@ -1,0 +1,99 @@
+---
+import Jona from "../components/icons/Jona.astro";
+import MoonIcon from "../components/icons/MoonIcon.astro";
+import SunIcon from "../components/icons/SunIcon.astro";
+import NavBar from "../components/UI/NavBar.astro";
+const theme = true;
+---
+
+<div
+  class="flex border-y-2 lg:border-none border-black bg-white dark:bg-dark lg:bg-transparent justify-between fixed lg:top-6 w-full py-4 lg:py-0 px-10 items-center z-50"
+>
+  <a href="#inicio">
+    <Jona />
+  </a>
+  <div class="hidden lg:block mt-2">
+    <NavBar />
+  </div>
+  <div class="flex items-center">
+    <button id="theme-toggle" class="mr-4">
+      <div id="theme-icons">
+        <SunIcon id="theme-icon-sun" class={!theme ? "hidden" : ""} />
+        <MoonIcon id="theme-icon-moon" class={theme ? "hidden" : ""} />
+      </div>
+    </button>
+    <button id="menu-toggle" class="lg:hidden">
+      <!-- Icono de menú hamburguesa -->
+      <svg
+        class="w-6 h-6 dark:stroke-white"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<div
+  id="mobile-menu"
+  class="hidden z-50 fixed top-[4.75rem] right-8 bg-white shadow-md rounded-lg border-2 border-black dark:bg-dark dark:shadow-black dark:border-white w-64"
+>
+  <NavBar />
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const themeToggle = document.getElementById("theme-toggle");
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const htmlElement = document.documentElement;
+    const sunIcon = document.getElementById("theme-icon-sun");
+    const moonIcon = document.getElementById("theme-icon-moon");
+
+    const updateIcons = () => {
+      if (htmlElement.classList.contains("dark")) {
+        if (sunIcon && moonIcon) {
+          sunIcon.classList.add("hidden");
+          moonIcon.classList.remove("hidden");
+        }
+      } else {
+        if (sunIcon && moonIcon) {
+          sunIcon.classList.remove("hidden");
+          moonIcon.classList.add("hidden");
+        }
+      }
+    };
+
+    if (themeToggle) {
+      themeToggle.addEventListener("click", () => {
+        htmlElement.classList.toggle("dark");
+        updateIcons();
+      });
+    }
+
+    if (menuToggle) {
+      menuToggle.addEventListener("click", () => {
+        if (mobileMenu) mobileMenu.classList.toggle("hidden");
+      });
+    }
+
+    document.addEventListener("click", (event) => {
+      if (menuToggle && mobileMenu)
+        if (
+          !menuToggle.contains(event.target as Node) &&
+          !mobileMenu.contains(event.target as Node)
+        ) {
+          mobileMenu.classList.add("hidden");
+        }
+    });
+
+    updateIcons();
+  });
+</script>

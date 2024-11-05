@@ -15,8 +15,8 @@ const {
 } = Astro.props as Project;
 ---
 
-<div class="flex gap-5 items-center h-full">
-  <div class="flex flex-col gap-2 max-w-[29rem]">
+<div class="h-full flex flex-col gap-5 w-[80%] p-4 md:p-0">
+  <div class="flex flex-col gap-2 max-w-full md:max-w-[29rem]">
     <h3 class="text-2xl font-semibold text-secondary dark:text-secondaryDark">
       {title}
     </h3>
@@ -32,7 +32,7 @@ const {
         ))
       }
     </div>
-    <p class="w-96">{description}</p>
+    <p class="w-full md:w-96">{description}</p>
     <div class="flex gap-4">
       {
         !!production && (
@@ -69,13 +69,15 @@ const {
       }
     </div>
   </div>
-  <div class="flex w-full justify-end">
-    <a href={production || code || presentation} target="_blank">
-      <img
-        src={image}
-        alt={title}
-        class="w-[25rem] rounded-xl shadow-xl transition duration-500 hover:scale-90 hover:rounded-xl dark:shadow-lg  dark:shadow-slate-700 dark:shadow-opacity-1"
-      />
-    </a>
-  </div>
+  <div
+  class="flex w-full h-32 md:h-64 justify-end shadow-2xl md:shadow-black transition duration-500 hover:scale-90 hover:rounded-xl dark:shadow-lg dark:shadow-slate-700 dark:shadow-opacity-1 overflow-hidden rounded-xl"
+>
+  <a href={production || code || presentation} target="_blank" class="w-full h-full">
+    <img
+      src={image}
+      alt={title}
+      class="w-full h-full object-cover object-top"
+    />
+  </a>
+</div>
 </div>

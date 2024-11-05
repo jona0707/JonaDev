@@ -15,7 +15,7 @@ const beg = TECH.filter((tech) => tech.nivel === "beg").flatMap(
 
 <div class="flex flex-col gap-2">
   <h4 class="text-xl text-start font-semibold text-secondary dark:text-secondaryDark">Proeficiente</h4>
-  <div class="flex w-full justify-between gap-2">
+  <div class="flex w-full justify-between gap-2 flex-wrap">
     {
       pro.map(({ tech, color, icon: Icon }) => (
         <div class="relative group">
@@ -30,7 +30,7 @@ const beg = TECH.filter((tech) => tech.nivel === "beg").flatMap(
     }
   </div>
   <h4 class="text-xl text-start font-semibold text-secondary dark:text-secondaryDark">Competente</h4>
-  <div class="flex w-full justify-between gap-2">
+  <div class="flex w-full justify-between gap-2 flex-wrap">
     {
       mid.map(({ tech, color, icon: Icon }) => (
         <div class="relative group">
@@ -47,7 +47,7 @@ const beg = TECH.filter((tech) => tech.nivel === "beg").flatMap(
   <h4 class="text-xl text-start font-semibold text-secondary dark:text-secondaryDark">
     Experiencia en
   </h4>
-  <div class="flex w-full justify-between gap-2">
+  <div class="flex w-full justify-between gap-2 flex-wrap">
     {
       beg.map(({ tech, color, icon: Icon }) => (
         <div class="relative group">
