@@ -6,7 +6,7 @@ const { certificate, image, academyTime, stack } = Astro.props as Complementary;
 ---
 
 <div class="flex flex-col">
-  <h4 class="w-96 text-xl font-semibold text-secondary mt-1 mb-2">
+  <h4 class="w-96 text-xl font-semibold text-secondary dark:text-secondaryDark mt-1 mb-2">
     {certificate}
   </h4>
   <div class="flex gap-5 justify-start">
@@ -17,7 +17,7 @@ const { certificate, image, academyTime, stack } = Astro.props as Complementary;
     >
       <img
         transition:name=`img-${certificate}`
-        class="w-36 rounded-2xl border-4 border-black"
+        class="w-36 rounded-2xl border-4 border-black "
         src={image}
         alt={certificate}
       />

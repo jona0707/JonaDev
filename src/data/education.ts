@@ -10,7 +10,7 @@ import JavaScriptIcon from "../components/tech-icons/JavaScriptIcon.astro";
 import KotlinIcon from "../components/tech-icons/KotlinIcon.astro";
 import MongoDBIcon from "../components/tech-icons/MongoDBIcon.astro";
 import MSQLServerIcon from "../components/tech-icons/MSQLServerIcon.astro";
-import NodeIcon2 from "../components/tech-icons/NodeIcon2.astro";
+import NodeIcon from "../components/tech-icons/NodeIcon.astro";
 import PythonIcon from "../components/tech-icons/PythonIcon.astro";
 import ReactIcon from "../components/tech-icons/ReactIcon.astro";
 import TypeScriptIcon from "../components/tech-icons/TypeScriptIcon.astro";
@@ -70,7 +70,7 @@ export const EDUCATION: Education[] = [
       {
         tech: "Node",
         color: "black",
-        icon: NodeIcon2,
+        icon: NodeIcon,
       },
       {
         tech: "MongoDB",

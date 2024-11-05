@@ -3,12 +3,12 @@ import { EXPERIENCIE } from "../../data/experience";
 import ExperienceLineTimeItem from "./ExperienceLineTimeItem.astro";
 ---
 
-<ol class="relative border-s-[3px] border-secondary">
+<ol class="relative border-s-[3px] border-secondary dark:border-secondaryDark">
   {
     EXPERIENCIE.map((exp) => (
       <li class="mb-10 ms-5">
         <ExperienceLineTimeItem
-          time={exp.date}
+          date={exp.date}
           title={exp.title}
           subtitle={exp.subtitle}
           description={exp.description}

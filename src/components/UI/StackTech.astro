@@ -14,7 +14,7 @@ const beg = TECH.filter((tech) => tech.nivel === "beg").flatMap(
 ---
 
 <div class="flex flex-col gap-2">
-  <h4 class="text-xl text-start font-semibold text-secondary">Proeficiente</h4>
+  <h4 class="text-xl text-start font-semibold text-secondary dark:text-secondaryDark">Proeficiente</h4>
   <div class="flex w-full justify-between gap-2">
     {
       pro.map(({ tech, color, icon: Icon }) => (
@@ -22,14 +22,14 @@ const beg = TECH.filter((tech) => tech.nivel === "beg").flatMap(
           <BadgeHability color={color} size={9}>
             <Icon color="black" secondaryColor="white" size={70} />
           </BadgeHability>
-          <div class="absolute bottom-full mb-2 hidden w-max px-2 py-1 text-sm text-white bg-black rounded group-hover:block">
+          <div class="absolute bottom-full mb-2 hidden w-max px-2 py-1 text-sm text-white bg-black rounded group-hover:block  dark:bg-primary dark:text-dark">
             {tech}
           </div>
         </div>
       ))
     }
   </div>
-  <h4 class="text-xl text-start font-semibold text-secondary">Competente</h4>
+  <h4 class="text-xl text-start font-semibold text-secondary dark:text-secondaryDark">Competente</h4>
   <div class="flex w-full justify-between gap-2">
     {
       mid.map(({ tech, color, icon: Icon }) => (
@@ -37,14 +37,14 @@ const beg = TECH.filter((tech) => tech.nivel === "beg").flatMap(
           <BadgeHability color={color} size={7}>
             <Icon color="black" secondaryColor="white" size={60} />
           </BadgeHability>
-          <div class="absolute bottom-full mb-2 hidden w-max px-2 py-1 text-sm text-white bg-black rounded group-hover:block">
+          <div class="absolute bottom-full mb-2 hidden w-max px-2 py-1 text-sm text-white bg-black rounded group-hover:block dark:bg-primary dark:text-dark">
             {tech}
           </div>
         </div>
       ))
     }
   </div>
-  <h4 class="text-xl text-start font-semibold text-secondary">
+  <h4 class="text-xl text-start font-semibold text-secondary dark:text-secondaryDark">
     Experiencia en
   </h4>
   <div class="flex w-full justify-between gap-2">
@@ -54,7 +54,7 @@ const beg = TECH.filter((tech) => tech.nivel === "beg").flatMap(
           <BadgeHability color={color} size={5}>
             <Icon color="black" secondaryColor="white" size={50} />
           </BadgeHability>
-          <div class="absolute bottom-full mb-2 hidden w-max px-2 py-1 text-sm text-white bg-black rounded group-hover:block">
+          <div class="absolute bottom-full mb-2 hidden w-max px-2 py-1 text-sm text-white bg-black rounded group-hover:block dark:bg-primary dark:text-dark">
             {tech}
           </div>
         </div>

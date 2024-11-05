@@ -2,8 +2,9 @@
 interface Props {
   color: string;
   size: string;
+  className?: string;
 }
-const { color, size } = Astro.props;
+const { color, size, className } = Astro.props;
 ---
 
 <svg
@@ -11,7 +12,9 @@ const { color, size } = Astro.props;
   width={size}
   height={size}
   xmlns="http://www.w3.org/2000/svg"
-  ><g fill={color}
+  ><g 
+  class="dark:fill-dark"
+  fill={color}
     ><path
       d="m8.708 61.26c0 20.802 12.089 38.779 29.619 47.298l-25.069-68.686c-2.916 6.536-4.55 13.769-4.55 21.388z"
     ></path><path

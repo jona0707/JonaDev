@@ -13,13 +13,17 @@ const { color = "white", secondaryColor = "black", size } = Astro.props;
   width={size}
   height={size}
 >
-  <path fill={color} d="M41 460L0 0h451l-41 460-185 52"></path>
-  <path fill={color} d="M226 472l149-41 35-394H226"></path>
+  <path class="dark:fill-dark" fill={color} d="M41 460L0 0h451l-41 460-185 52"
+  ></path>
+  <path class="dark:fill-dark" fill={color} d="M226 472l149-41 35-394H226"
+  ></path>
   <path
+    class="dark:fill-primary"
     fill={secondaryColor}
     d="M226 208H94l5 57h127zm0-114H84l5 56h137zm0 261l-124-33 7 60 117 32z"
   ></path>
   <path
+    class="dark:fill-primary"
     fill={secondaryColor}
     d="M226 265h69l-7 73-62 17v59l115-32 26-288H226v56h80l-6 58h-74z"></path>
 </svg>
