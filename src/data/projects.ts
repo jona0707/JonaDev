@@ -94,7 +94,7 @@ export const PROJECTS: Project[] = [
     title: "FresQ",
     subtitle: "Académico - Líder de equipo, diseñador",
     description:
-      "Aplicación recreativa de obtención de Gifs de los personajes de la serie The Office, consumo de API, utilización de Hooks en React, implementación de Bootstrap y subida a producción a través de GitHub Pages.",
+      "Aplicación creada en entorno académico, su funcionamiento atacaba el desperdicio de comida en restaurantes, permitiendo a los usuarios adquirir productos a precios reducidos. Diseño de la aplicación en Canva y utilización de Notion para la organización del equipo.",
     image: "/images/projects/FQ.webp",
     presentation:
       "https://www.canva.com/design/DAGN3typxGk/FMcLIGzskgV8eOq8EelpLw/edit?utm_content=DAGN3typxGk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",

@@ -8,7 +8,7 @@ export const EXPERIENCIE: Experience[] = [
   {
     title: "Desarrollador Web Ocasional",
     subtitle: "DIESLA",
-    date: "abr 23 - Presente",
+    date: "abr 23 - oct 24",
     description: [
       "Colaboración en el mantenimiento y desarrollo de páginas web utilizando diversas herramientas.",
       "Contribución en proyectos específicos para Centros Médicos de la Cruz Roja Ecuatoriana y PNP Pest Solutions, aportando a su presencia en línea y funcionalidad de sus sitios web.",
