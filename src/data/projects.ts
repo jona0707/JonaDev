@@ -15,41 +15,6 @@ import type { Project } from "../types/projects";
 
 export const PROJECTS: Project[] = [
   {
-    title: "Smart Work Center",
-    subtitle: "Profesional - Desarrollador",
-    description:
-      "Sitio web para la empresa Smart Work Center, se la creó utilizando WordPress con Elementor, además de implementación de bloques HTML, CSS y JavaScript. Administración del hosting mediante cPanel.",
-    image: "/images/projects/SWC.webp",
-    production: "https://smart-workcenter.com/",
-    stack: [
-      {
-        tech: "WordPress",
-        color: "black",
-        icon: WordPressIcon,
-      },
-      {
-        tech: "Elementor",
-        color: "black",
-        icon: ElementorIcon,
-      },
-      {
-        tech: "HTML",
-        color: "black",
-        icon: HTMLIcon,
-      },
-      {
-        tech: "CSS",
-        color: "black",
-        icon: CSSIcon,
-      },
-      {
-        tech: "JavaScript",
-        color: "black",
-        icon: JavaScriptIcon,
-      },
-    ],
-  },
-  {
     title: "Task List App",
     subtitle: "Aprendizaje - Desarrollador",
     description:
