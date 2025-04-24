@@ -5,6 +5,7 @@ import ElementorIcon from "../components/tech-icons/ElementorIcon.astro";
 import ExpressIcon from "../components/tech-icons/ExpressIcon.astro";
 import HTMLIcon from "../components/tech-icons/HTMLIcon.astro";
 import JavaScriptIcon from "../components/tech-icons/JavaScriptIcon.astro";
+import MaterialUIIcon from "../components/tech-icons/MaterialUIIcon.astro";
 import MySQLIcon from "../components/tech-icons/MySQLIcon.astro";
 import NotionIcon from "../components/tech-icons/NotionIcon.astro";
 import ReactIcon from "../components/tech-icons/ReactIcon.astro";
@@ -14,6 +15,42 @@ import WordPressIcon from "../components/tech-icons/WordPressIcon.astro";
 import type { Project } from "../types/projects";
 
 export const PROJECTS: Project[] = [
+  {
+    title: "PoliEventos",
+    subtitle: "Desarrollador FullStack - Proyecto de Grado",
+    description:
+      "Herramienta diseñada para la gestión de eventos de vinculación en la Facultad de Ingeniería Eléctrica y Electrónica (FIEE) de la Escuela Politécnica Nacional (EPN). Facilita el registro, visualización y administración de eventos realizados en la facultad, integrando funcionalidades como manejo de roles y permisos, creación de reportes y categorización de eventos. Para más información ingrese en el código (README).",
+    image: "/images/projects/PE.webp",
+    code: "https://github.com/Intec-EPN/PoliEventos",
+    production: "https://poli-eventos-test.netlify.app/",
+    stack: [
+      {
+        tech: "React",
+        color: "black",
+        icon: ReactIcon,
+      },
+      {
+        tech: "Express",
+        color: "black",
+        icon: ExpressIcon,
+      },
+      {
+        tech: "JavaScript",
+        color: "black",
+        icon: JavaScriptIcon,
+      },
+      {
+        tech: "MySQL",
+        color: "black",
+        icon: MySQLIcon,
+      },
+      {
+        tech: "Material UI",
+        color: "black",
+        icon: MaterialUIIcon,
+      },
+    ],
+  },
   {
     title: "Task List App",
     subtitle: "Aprendizaje - Desarrollador",
@@ -74,7 +111,7 @@ export const PROJECTS: Project[] = [
         color: "black",
         icon: JavaScriptIcon,
       },
-            {
+      {
         tech: "MySQL",
         color: "black",
         icon: MySQLIcon,
