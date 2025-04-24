@@ -19,12 +19,13 @@ import type { Complementary } from "../types/education";
 
 export const EDUCATION: Education[] = [
   {
-    date: "oct 18 - Presente",
+    date: "oct 18 - ene 25",
     field: "Ingeniería en Tecnologías de la Información",
     institution: "Escuela Politécnica Nacional ",
     description: [
-      "Actualmente cursando el 9no y último semestre de la carrera.",
-      "Becado por excelencia académica.",
+      "Becado por Excelencia Académica.",
+      "Certificado por nota sobresaliente en el Examen de Fin de Carrera.",
+      "Puntaje total en Trabajo de Integración Curricular para ser Ingeniero."
     ],
     stack: [
       {
