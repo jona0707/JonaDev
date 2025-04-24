@@ -1,3 +1,4 @@
+import TailwindIcon from "../components/icons/TailwindIcon.astro";
 import CSSIcon from "../components/tech-icons/CSSIcon.astro";
 import HTMLIcon from "../components/tech-icons/HTMLIcon.astro";
 import JavaScriptIcon from "../components/tech-icons/JavaScriptIcon.astro";
@@ -29,14 +30,14 @@ export const EXPERIENCIE: Experience[] = [
         icon: ReactIcon,
       },
       {
+        tech: "Tailwind",
+        color: "black",
+        icon: TailwindIcon,
+      },
+      {
         tech: "Next.JS",
         color: "black",
         icon: NextJsIcon,
-      },
-      {
-        tech: "JavaScript",
-        color: "black",
-        icon: JavaScriptIcon,
       },
     ],
   },
